@@ -1,0 +1,7 @@
+# discordpy-startup
+discord.py on Heroku
+@bot.command(pass_context=True)
+async def ping2(msg):  # 処理時間を返す
+    startt = time.time()
+    await msg.send("計測中……!")
+    await msg.send("pong！\n結果:**"+str(round(time.time()-startt, 3))+"**秒だ！")
